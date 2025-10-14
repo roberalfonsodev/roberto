@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubin Roberto Alfonso | Front-End Developer</title>
+  <link rel="stylesheet" href="css/styleindex.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <style>
+   
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+    <div class="icono-nombre">
+      <img class="icono-foto" src="img/icono-foto.jpg" alt="">
+      <h1>Dubin R. Alfonso</h1>
+    </div>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#music">Música</a></li>
+        <li><a href="#travel">Ciudades</a></li>
+        <li><a href="#goals">Metas</a></li>
+      </ul>
+    
+      <img class="burguer-icon" src="img/burguer-icon.png" alt="">
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <main>
+  
+    <div class="container-foto-ferfil">
+        <img class="foto-perfil" src="img/mifoto.png" alt="">
+    </div>
+    <div class="container-informacion-perfil">
+        <h2>Hola, soy Dubin Roberto Alfonso 👋</h2>
+        <p>Front-End Developer, guitarrista, y apasionado por la tecnología y la enseñanza.</p>
+        <button class="btn-primary" onclick="window.scrollTo({top: 600, behavior:'smooth'})">Conóceme más</button>
+    </div>
+  
+  </main>
+
+  <!-- ===== SOBRE MI ===== -->
+  <section id="about" data-animate>
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="card">
+      <p><strong>Edad:</strong> 28 años</p>
+      <p><strong>Profesión:</strong> Front-End Developer</p>
+      <p><strong>Otras profesiones:</strong> Profesor de inglés, asistente administrativo, editor de imagen y video.</p>
+      <p><strong>Fe:</strong> Cristiano evangélico - Iglesia Centro Cristiano</p>
+    </div>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section id="skills" data-animate>
+    <h2 class="section-title">Habilidades</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Desarrollo</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>SQL, Visual Basic</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Idiomas</h3>
+        <ul>
+          <li>Español (nativo)</li>
+          <li>Inglés (avanzado)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Otras habilidades</h3>
+        <ul>
+          <li>Música (guitarrista)</li>
+          <li>Entrenador de patinaje de velocidad</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MÚSICA ===== -->
+  <section id="music" data-animate>
+    <h2 class="section-title">Música favorita</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Worship</h3>
+        <ul>
+          <li>Generación 12</li>
+          <li>Un Corazón</li>
+          <li>Averly Morillo</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Rock</h3>
+        <ul>
+          <li>Miel San Marcos</li>
+          <li>Guardian</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Urbano</h3>
+        <ul>
+          <li>Funky</li>
+          <li>Redimi2</li>
+          <li>Alex Zurdo</li>
+          <li>Jay Kalyl</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIAJES ===== -->
+  <section id="travel" data-animate>
+    <h2 class="section-title">Ciudades que he visitado</h2>
+    <div class="card">
+      <p>Medellín, Bogotá, Cartagena, Santa Marta, Ibagué, Bucaramanga, Caracas, Barquisimeto.</p>
+    </div>
+  </section>
+
+  <!-- ===== METAS ===== -->
+  <section id="goals" data-animate>
+    <h2 class="section-title">Metas de aprendizaje</h2>
+    <div class="grid">
+      <div class="card">
+        <ul>
+          <li>React</li>
+          <li>Docker</li>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>Kotlin</li>
+          <li>Machine Learning</li>
+          <li>NoSQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Dubin Roberto Alfonso | Desarrollador Front-End 🎧
+  </footer>
+
+  <script>
+    // Animación al hacer scroll
+    const elements = document.querySelectorAll("[data-animate]");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
