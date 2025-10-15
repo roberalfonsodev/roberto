@@ -23,7 +23,7 @@
       <img class="icono-foto" src="img/icono-foto.jpg" alt="">
       <h1>Dubin R. Alfonso</h1>
     </div>
-      <ul>
+      <ul id="ul">
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#skills">Habilidades</a></li>
         <li><a href="#music">Música</a></li>
@@ -31,7 +31,9 @@
         <li><a href="#goals">Metas</a></li>
       </ul>
     
-      <img class="burguer-icon" src="img/burguer-icon.png" alt="">
+      <button class="menu-icon" id="menu-icon">
+      ☰
+      </button>
     </nav>
   </header>
 
@@ -48,6 +50,43 @@
     </div>
   
   </main>
+  <!-- =====grid: sobre mi ===== -->
+  <section id="menu" data-animate>
+  <h2 class="section-title">Menú</h2>
+  <div class="card-menu">
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#about">
+        <button class="btn-menu"><span>👤</span><br>Sobre mí</button>
+      </a>
+    </div>
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#skills">
+        <button class="btn-menu"><span>⚙</span><br>Habilidades</button>
+      </a>
+    </div>
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#music">
+        <button class="btn-menu"><span>🎵</span><br>Música</button>
+      </a>
+    </div>
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#travel">
+        <button class="btn-menu"><span>✈️</span><br>Viajes</button>
+      </a>
+    </div>
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#goals">
+        <button class="btn-menu"><span>🎯</span><br>Metas</button>
+      </a>
+    </div>
+    <div class="tarjetas-menu">
+      <a class="link-menu" href="#contact">
+        <button class="btn-menu"><span>📩</span><br>Contacto</button>
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- ===== SOBRE MI ===== -->
   <section id="about" data-animate>
@@ -150,18 +189,9 @@
     © 2025 Dubin Roberto Alfonso | Desarrollador Front-End 🎧
   </footer>
 
-  <script>
-    // Animación al hacer scroll
-    const elements = document.querySelectorAll("[data-animate]");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
+  <script src="script/scriptindex.js">
+
+    
   </script>
 
 </body>
