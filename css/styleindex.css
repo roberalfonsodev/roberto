@@ -90,7 +90,7 @@
 
     }
 
-    .burguer-icon {
+    .menu-icon {
         display: none;
     }
 
@@ -184,6 +184,69 @@
       margin: 0.5rem auto 0;
       border-radius: 10px;
     }
+    
+
+      #menu {
+        padding: 2rem;
+        text-align: center;
+        background-color: #0d1117;
+        color: #c9d1d9;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        color: #58a6ff;
+        margin-bottom: 1.5rem;
+      }
+
+      /* === GRID === */
+      .card-menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+      }
+
+      /* === TARJETAS === */
+      .tarjetas-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .btn-menu {
+        background-color: var(--card-bg);
+        border: 1px solid var(--primary);
+        border-radius: 12px;
+        color: var(--text);
+        font-size: 0.9rem;
+        padding: 1rem;
+        width: 6rem;
+        height: 120px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-menu span {
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .link-menu{
+        text-decoration: none;
+      }
+
+      .btn-menu:hover {
+        background-color: #21262d;
+        color: #58a6ff;
+        transform: translateY(-3px);
+        box-shadow: 0 0 8px #58a6ff55;
+      }
 
     .card {
       background: var(--card-bg);
@@ -240,12 +303,46 @@
       .hero h2 {
         font-size: 2rem;
       }
+      
       nav ul {
         display: none;
+        padding: 0;
+        margin: 0;
+        background-color:#005fa3d2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 4.7rem;
+        width: 100%;
+        text-align: center;
+
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;; 
+               
       }
+
+      nav ul li{
+        border-top: 1px solid #30363d;
+      }
+
+      nav ul li a{
+        display: block;
+        padding: 15px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      nav ul.active{
+        display: block;
+        max-height: 300px; /* Ajusta según cuántos ítems tengas */
+         opacity: 1;
+      }
+
       main{
         width: 100vw;
-        height: 50vh;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -301,7 +398,13 @@
         margin-bottom: 1.5rem;
         }
 
-        .burguer-icon {
+        .menu-icon {
         display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        background: none;
+        border: none;
+        color: var(--primary);
+        cursor: pointer;
     }
     }
